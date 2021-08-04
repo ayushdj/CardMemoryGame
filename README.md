@@ -7,12 +7,12 @@ will flip back on their side such that the user has another shot. Enjoy the game
 
 Design:
 
-- I defined a class called "Game" that creates several instance variables for several 
+I defined a class called "Game" that creates several instance variables for several 
 purposes. The following modules are the ones I'm importing into the game:
 
-- time
-- turtle
-- random
+	- time
+	- turtle
+	- random
 
 	Attributes of the class:
 		- self.boi (turtle.Turtle()) - instance of the turtle that draws boundaries
@@ -63,27 +63,27 @@ purposes. The following modules are the ones I'm importing into the game:
 
 Data Structures Used:
 
-	- list -> to store the names of the face card files and the names on the leaderboard
-	- dictionaries -> to store the 8/10/12 different turtle objects for both the back facing
+list -> to store the names of the face card files and the names on the leaderboard
+dictionaries (Hash Map) -> to store the 8/10/12 different turtle objects for both the back facing
 					  and front facing cards. So for example, if the user selected to play a game with
 					  12 cards, there will be 24 turtle objects. 12 turtles for each face card
 					  and 12 objects for each back facing card
-	- string -> to store the names of the players
+string -> to store the names of the players
 
 Approach to Testing:
 
-	In order to see that my game works as planned, I tested the following scenarios: If the user doesn't enter a 
-	valid name (i.e. a name with a length greater than 0), then I force them to re-enter an actual 
-	name such that the leaderboard can keep track of it. I did this by simply hitting "enter" without a name
-	entered into the area where it asks for a name. Also, if the user doesn't enter either exactly 8,
-	10 or 12 cards, I force them to re-enter the number until it can go through. I entered inputs of 7, 9, 11
-	and numbers greater than 12. It worked as expected; it didn't start the game until the user enter either 8,
-	10 or 12. With regard to leaderboard testing, I created a dummy file with temporary
-	scores to see if it would load them in. It passed that test. To test that the code passes
-	the "leaderboard file not found error" test, I moved the dummy file out of the current working directory
-	and saw if it would load in the error message, which it did. To test whether the leaderboard is only
-	updated when the game is finished, I tried quitting out of the program before
-	matching all the cards; it worked. To test whether the leaderboard file gets updated only
-	when all matches have been made, I simply opened the leaderboard file after finishing and
-	exiting the game to see if the current person's name (who just played the game) is there; it 
-	passed this test.
+In order to see that my game works as planned, I tested the following scenarios: If the user doesn't enter a 
+valid name (i.e. a name with a length greater than 0), then I force them to re-enter an actual 
+name such that the leaderboard can keep track of it. I did this by simply hitting "enter" without a name
+entered into the area where it asks for a name. Also, if the user doesn't enter either exactly 8,
+10 or 12 cards, I force them to re-enter the number until it can go through. I entered inputs of 7, 9, 11
+and numbers greater than 12. It worked as expected; it didn't start the game until the user enter either 8,
+10 or 12. With regard to leaderboard testing, I created a dummy file with temporary
+scores to see if it would load them in. It passed that test. To test that the code passes
+the "leaderboard file not found error" test, I moved the dummy file out of the current working directory
+and saw if it would load in the error message, which it did. To test whether the leaderboard is only
+updated when the game is finished, I tried quitting out of the program before
+matching all the cards; it worked. To test whether the leaderboard file gets updated only
+when all matches have been made, I simply opened the leaderboard file after finishing and
+exiting the game to see if the current person's name (who just played the game) is there; it 
+passed this test.
